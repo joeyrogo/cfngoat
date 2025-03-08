@@ -64,7 +64,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -84,6 +84,8 @@ Resources:
           Value: !Sub '${AWS::StackName}-VPC'
         - Key: yor_trace
           Value: e672877b-726b-4bb5-bb27-f7e8edb7613e
+        - Key: git_file
+          Value: terraform/aws/ec2.tf
   InternetGateway:
     Type: "AWS::EC2::InternetGateway"
     Properties:
@@ -92,6 +94,8 @@ Resources:
           Value: !Sub '${AWS::StackName}-Internet Gateway'
         - Key: yor_trace
           Value: c4e86b57-aa6a-4ff4-bef0-35905cc87db7
+        - Key: git_file
+          Value: terraform/aws/ec2.tf
   VPCGatewayAttachment:
     Type: "AWS::EC2::VPCGatewayAttachment"
     Properties:
@@ -108,6 +112,8 @@ Resources:
           Value: Public
         - Key: yor_trace
           Value: 99369f84-ea70-403b-91b1-1298c1d9b826
+        - Key: git_file
+          Value: terraform/aws/ec2.tf
   PrivateRouteTable01:
     Type: AWS::EC2::RouteTable
     Properties:
@@ -120,7 +126,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -143,7 +149,7 @@ Resources:
         - Key: Network
           Value: Private02
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -198,6 +204,8 @@ Resources:
           Value: !Sub '${AWS::StackName}-NatGatewayAZ1'
         - Key: yor_trace
           Value: 9a63423c-9c6e-4467-8a1e-b1fd9029281d
+        - Key: git_file
+          Value: terraform/aws/ec2.tf
   NatGateway02:
     DependsOn:
     - NatGatewayEIP2
@@ -211,7 +219,7 @@ Resources:
         - Key: Name
           Value: !Sub '${AWS::StackName}-NatGatewayAZ2'
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -234,7 +242,7 @@ Resources:
       Domain: vpc
       Tags:
         - Key: git_file
-          Value: eks.yaml
+          Value: terraform/aws/ec2.tf
         - Key: git_commit
           Value: 52127b2051fa27ca5168b17798cd4f63723a13f1
         - Key: git_modifiers
@@ -259,7 +267,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -291,6 +299,8 @@ Resources:
           Value: !Sub "${AWS::StackName}-PublicSubnet01"
         - Key: yor_trace
           Value: 7c34a299-7166-44a5-8ce5-09c8c9beca84
+        - Key: git_file
+          Value: terraform/aws/ec2.tf
   PublicSubnet02:
     Type: AWS::EC2::Subnet
     Metadata:
@@ -311,7 +321,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -352,7 +362,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -377,7 +387,7 @@ Resources:
         - Key: Name
           Value: !Sub "${AWS::StackName}-PrivateSubnet02"
         - Key: "kubernetes.io/role/internal-elb"
-          Value: "1"
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
@@ -425,7 +435,7 @@ Resources:
         - Key: git_org
           Value: bridgecrewio
         - Key: git_repo
-          Value: cfngoat
+          Value: terraform/aws/ec2.tf
         - Key: git_file
           Value: eks.yaml
         - Key: git_commit
